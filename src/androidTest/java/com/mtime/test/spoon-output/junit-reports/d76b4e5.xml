@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.mtime.test" tests="2" failures="1" errors="0" skipped="0" time="498.035" timestamp="2015-06-25T06:13:36" hostname="localhost">
+  <properties />
+  <testcase name="testPersonDetail" classname="com.mtime.test.PersonDetail" time="319.535" />
+  <testcase name="testMovieInfo" classname="com.mtime.test.MovieDetail" time="178.478">
+    <failure>com.mtime.test.BaseTest$RunTestException: Error in runtest()!
+at com.mtime.test.BaseTest.runTest(BaseTest.java:60)
+at android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)
+at android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)
+at android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1701)
+Caused by: java.lang.OutOfMemoryError
+at android.graphics.Bitmap.nativeCreate(Native Method)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:810)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:787)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:754)
+at com.squareup.spoon.Spoon.takeScreenshot(Spoon.java:86)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:76)
+at com.squareup.spoon.Spoon.screenshot(Spoon.java:53)
+at com.mtime.test.MovieDetail.testMovieInfo(MovieDetail.java:26)
+at java.lang.reflect.Method.invokeNative(Native Method)
+at android.test.InstrumentationTestCase.runMethod(InstrumentationTestCase.java:214)
+at android.test.InstrumentationTestCase.runTest(InstrumentationTestCase.java:199)
+at android.test.ActivityInstrumentationTestCase2.runTest(ActivityInstrumentationTestCase2.java:192)
+at com.mtime.test.BaseTest.runTest(BaseTest.java:48)
+... 9 more
+</failure>
+  </testcase>
+</testsuite>

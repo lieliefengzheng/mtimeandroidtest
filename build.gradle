@@ -1,0 +1,81 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.stanfy.spoon:spoon-gradle-plugin:1.0.2'
+        classpath('com.stanfy.spoon:spoon-gradle-plugin:1.0.2') {
+            exclude module: 'guava'
+        }
+        classpath 'com.google.guava:guava:17.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'spoon'
+//spoon {
+//    // for debug output
+//    debug = true
+//    // To run a single test class
+//    className = 'com.mtime.test.MtimeTestSuite'
+//    // To run a single method in TestCase
+//    methodName = 'TestSuite'
+//}
+repositories {
+	mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    androidTestCompile fileTree(include: 'robotium-solo-5.3.2-SNAPSHOT.jar', dir: 'libs')
+    compile files('libs/robotium-solo-5.3.2-SNAPSHOT.jar')
+    compile files('libs/android-junit-report-1.5.8.jar')
+    compile files('libs/spoon-client-1.1.9.jar')
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.1.9'
+}
+
+android {
+    compileSdkVersion 'android-19'
+    buildToolsVersion '21.1.2'
+
+    android {
+        defaultConfig {
+            minSdkVersion 8
+        }
+
+        lintOptions {
+            abortOnError false
+        }
+        sourceSets
+                {
+                    androidTest
+                            {
+                                res.srcDirs = ['res']
+                                assets.srcDirs = ['assets']
+                            }
+                }
+    }
+    buildTypes {
+        release {
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}
+
+task assembleDebug(overwrite: true) {}
+
+task copyTask(type: Copy) {
+    from '/Users/zhangmanying/code/androidcode/mtime_app/mTimeMovie/build/outputs/apk/mTimeMovie-debug-unaligned.apk'
+    into 'build/outputs/apk/'
+    rename {
+        'MtimeAndroidTest-debug.apk'
+    }
+}
+
+assembleDebug.dependsOn copyTask

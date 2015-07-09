@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Info</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+        <link href="../../static/bootstrap.min.css" rel="stylesheet">
+        <link href="../../static/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="../../static/spoon.css" rel="stylesheet">
+        <script src="../../static/jquery.min.js"></script>
+        <script src="../../static/bootstrap.min.js"></script>
+        <meta name="description" content="Ran on 1 device with 0 passing and 1 failing">
+    </head>
+    <body>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Movie Info</h1>
+                <p>Ran on 1 device with 0 passing and 1 failing</p>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <h2 class="test-result fail">
+                        Xiaomi MI 3W
+                        <!-- Icons modified from Glyphish Free. http://glyphish.com -->
+                        <a href="../../logs/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo.html" title="View device log" class="pull-right icon">
+                            <img src="../../static/icon-log.png" alt="View device log">
+                        </a>
+                        <a href="../../device/d76b4e5.html" title="View only this device" class="pull-right icon">
+                            <img src="../../static/icon-devices.png" alt="View only this device">
+                        </a>
+                        <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo.gif" title="View as animated GIF" class="pull-right icon">
+                            <img src="../../static/icon-animated.png" alt="View as animated GIF">
+                        </a>
+                    </h2>
+                    <div class="alert alert-error stacktrace fail">
+                        <h4 data-toggle="collapse" data-target="#stacktrace-d76b4e5">com.mtime.test.BaseTest$RunTestException: Error in runtest()!</h4>
+                        <div class="stacktrace-body collapse" id="stacktrace-d76b4e5">
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at com.mtime.test.BaseTest.runTest(BaseTest.java:60)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:191)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.test.AndroidTestRunner.runTest(AndroidTestRunner.java:176)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.test.InstrumentationTestRunner.onStart(InstrumentationTestRunner.java:554)</div>
+                            <div class="stacktrace-line">&nbsp;&nbsp;&nbsp;&nbsp;at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1701)</div>
+                            <div class="stacktrace-line">Caused by: java.lang.OutOfMemoryError</div>
+                        </div>
+                    </div>
+                    <ul class="thumbnails">
+                        <li class="span2">
+                            <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212668288_HomeActivity.png" class="thumbnail">
+                                <img src="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212668288_HomeActivity.png" title="HomeActivity">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212680526_FilmInfoActivity.png" class="thumbnail">
+                                <img src="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212680526_FilmInfoActivity.png" title="FilmInfoActivity">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212696138_Movie_info_wantseen.png" class="thumbnail">
+                                <img src="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212696138_Movie_info_wantseen.png" title="Movie Info Wantseen">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212742003_HomeActivity.png" class="thumbnail">
+                                <img src="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212742003_HomeActivity.png" title="HomeActivity">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212754645_FilmInfoActivity.png" class="thumbnail">
+                                <img src="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212754645_FilmInfoActivity.png" title="FilmInfoActivity">
+                            </a>
+                        </li>
+                        <li class="span2">
+                            <a href="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212770660_Movie_info_wantseen.png" class="thumbnail">
+                                <img src="../../image/d76b4e5/com.mtime.test.MovieDetail/testMovieInfo/1435212770660_Movie_info_wantseen.png" title="Movie Info Wantseen">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('.icon, .thumbnail img').tooltip({
+                container: 'body'
+            });
+        </script>
+    </body>
+</html>
